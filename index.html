@@ -247,6 +247,32 @@ section { padding-block: 72px; border-top: 1px solid var(--line); }
 .venture h3 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); font-stretch: 115%; font-weight: 800; }
 .venture p { color: var(--muted); }
 .venture ul { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+/* Venture illustrations: line drawings on a drafting grid */
+.art {
+  margin: -28px -28px 4px; aspect-ratio: 2 / 1; overflow: hidden;
+  border-bottom: 1px solid var(--line); border-radius: 4px 4px 0 0;
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--line) 55%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--line) 55%, transparent) 1px, transparent 1px);
+  background-size: 20px 20px; background-position: -1px -1px;
+}
+.art svg { display: block; width: 100%; height: 100%; }
+.art .s, .art .a, .art .c { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.art .s { stroke: var(--fg); }
+.art .a { stroke: var(--mask); }
+.art .c { stroke: var(--copper); }
+.art .cf { fill: var(--copper); fill-opacity: 0.22; stroke: var(--fg); stroke-width: 2; stroke-linejoin: round; }
+.art .sun { fill: var(--copper); stroke: none; }
+.art .t { fill: var(--muted); font: 500 9px var(--mono); letter-spacing: 0.08em; }
+.art .move { transform-box: fill-box; transform-origin: center; transition: transform .4s ease; }
+.venture:hover .art .move { transform: translateY(-4px); }
+@keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px) rotate(-0.6deg); } }
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
+@media (prefers-reduced-motion: no-preference) {
+  .art .ship { transform-box: fill-box; transform-origin: center bottom; animation: bob 3.2s ease-in-out infinite; }
+  .art .bolt { animation: blink 1.6s ease-in-out infinite; }
+}
 .venture-link { font-family: var(--mono); font-size: 0.85rem; font-weight: 500; justify-self: start; }
 .venture li {
   font-family: var(--mono); font-size: 0.75rem; padding: 4px 10px;
@@ -350,6 +376,7 @@ tbody tr:hover td.sym { color: var(--mask); }
   .cta .btn { flex: 1 1 auto; text-align: center; }
   .traces { height: 100px; }
   .venture, .parent { padding: 20px; }
+  .art { margin: -20px -20px 4px; }
   section { padding-block: 44px; }
   /* Table becomes stacked rows */
   table { min-width: 0; }
@@ -435,6 +462,26 @@ tbody tr:hover td.sym { color: var(--mask); }
     </div>
     <div class="ventures">
       <article class="venture">
+        <figure class="art" role="img" aria-label="Line drawing of a phone storefront, a Ulisha shopping bag and a cart">
+          <svg viewBox="0 0 320 160">
+            <text class="t" x="20" y="22">FIG. U1 · STOREFRONT</text>
+            <path class="s" d="M20 136H300"/>
+            <rect class="s" x="40" y="34" width="62" height="102" rx="8"/>
+            <rect class="a" x="50" y="48" width="18" height="18"/>
+            <rect class="a" x="74" y="48" width="18" height="18"/>
+            <rect class="a" x="50" y="72" width="18" height="18"/>
+            <rect class="a" x="74" y="72" width="18" height="18"/>
+            <path class="a" d="M50 104h42M50 114h28"/>
+            <g class="move">
+              <path class="s" d="M150 70h70l8 66h-86z"/>
+              <path class="s" d="M168 70v-10a17 17 0 0 1 34 0v10"/>
+              <path class="c" d="M176 92v14a9 9 0 0 0 18 0V92"/>
+            </g>
+            <path class="s" d="M244 96h10l10 30h32l8-22h-46"/>
+            <circle class="sun" cx="270" cy="133" r="4"/>
+            <circle class="sun" cx="292" cy="133" r="4"/>
+          </svg>
+        </figure>
         <div class="ref"><b>U1</b><span class="label">Ulisha Limited</span></div>
         <h3>Ulisha Store</h3>
         <p>A store I built from the ground up. I handle sourcing, operations and customer service, and I also built the systems that keep orders, stock and payments moving.</p>
@@ -442,18 +489,72 @@ tbody tr:hover td.sym { color: var(--mask); }
         <a class="venture-link" href="https://ulishastore.com" target="_blank" rel="noopener">ulishastore.com ↗</a>
       </article>
       <article class="venture">
+        <figure class="art" role="img" aria-label="Line drawing of crop rows, a sprouting plant, the sun and a field sensor">
+          <svg viewBox="0 0 320 160">
+            <text class="t" x="20" y="22">FIG. U2 · FIELD</text>
+            <circle class="sun" cx="262" cy="42" r="13"/>
+            <path class="c" d="M262 18v-6M262 72v-6M238 42h-6M292 42h-6M245 25l-4-4M283 63l-4-4M279 25l4-4M245 59l-4 4"/>
+            <path class="s" d="M20 96H300M20 136H300"/>
+            <path class="s" d="M30 136L130 96M90 136L150 96M150 136L170 96M210 136L190 96M270 136L210 96"/>
+            <g class="move">
+              <path class="a" d="M70 136V100"/>
+              <path class="a" d="M70 114c-14 0-22-8-22-20 14 0 22 8 22 20zM70 106c0-14 8-22 22-22 0 14-8 22-22 22z"/>
+            </g>
+            <path class="s" d="M240 136V96"/>
+            <rect class="s" x="230" y="82" width="20" height="14" rx="2"/>
+            <path class="c" d="M256 82a9 9 0 0 1 0 14M262 77a16 16 0 0 1 0 24"/>
+          </svg>
+        </figure>
         <div class="ref"><b>U2</b><span class="label">Ulisha Limited</span></div>
         <h3>U-Farm</h3>
         <p>Ulisha Limited's farming product, bringing technology and better systems to how food is grown and sold.</p>
         <ul><li>Agriculture</li><li>Agri-tech</li><li>Supply</li></ul>
       </article>
       <article class="venture">
+        <figure class="art" role="img" aria-label="Line drawing of a solar panel charging a battery, which charges a phone">
+          <svg viewBox="0 0 320 160">
+            <text class="t" x="20" y="22">FIG. U3 · SOLAR CHARGING</text>
+            <circle class="sun" cx="288" cy="32" r="9"/>
+            <path class="s" d="M20 136H300"/>
+            <g class="move">
+              <path class="s" d="M40 60L150 40L170 100L60 120Z"/>
+              <path class="a" d="M76.7 53.3L96.7 113.3M113.3 46.7L133.3 106.7M50 90L160 70"/>
+            </g>
+            <path class="s" d="M110 112V136M90 136h40"/>
+            <path class="c" d="M120 128C160 128 170 118 190 118"/>
+            <rect class="s" x="190" y="96" width="44" height="40" rx="3"/>
+            <rect class="s" x="204" y="90" width="16" height="6"/>
+            <path class="a" d="M198 126h28M198 118h28M198 110h28"/>
+            <path class="c" d="M234 120C248 120 250 128 262 128"/>
+            <rect class="s" x="262" y="80" width="30" height="56" rx="5"/>
+            <path class="sun bolt" d="M280 92l-9 15h7l-3 13 10-16h-7z"/>
+          </svg>
+        </figure>
         <div class="ref"><b>U3</b><span class="label">Founder</span></div>
         <h3>X-Station</h3>
         <p>A modern solar charging solution. X-Station turns sunlight into dependable power for charging devices, combining solar panels, battery storage and power electronics in one station.</p>
         <ul><li>Solar energy</li><li>Device charging</li><li>Battery storage</li><li>Power electronics</li></ul>
       </article>
       <article class="venture">
+        <figure class="art" role="img" aria-label="Line drawing of a cargo ship carrying export containers">
+          <svg viewBox="0 0 320 160">
+            <text class="t" x="20" y="22">FIG. U4 · EXPORT</text>
+            <g class="ship">
+              <rect class="cf" x="98" y="56" width="34" height="24"/>
+              <rect class="s" x="134" y="56" width="34" height="24"/>
+              <rect class="cf" x="170" y="56" width="34" height="24"/>
+              <rect class="s" x="80" y="80" width="34" height="24"/>
+              <rect class="cf" x="116" y="80" width="34" height="24"/>
+              <rect class="s" x="152" y="80" width="34" height="24"/>
+              <rect class="cf" x="188" y="80" width="34" height="24"/>
+              <rect class="s" x="228" y="70" width="26" height="34"/>
+              <path class="a" d="M233 80h16"/>
+              <path class="s" d="M238 70V58h8v12"/>
+              <path class="s" d="M50 104h220l-22 26H74z"/>
+            </g>
+            <path class="a" d="M20 134q10-6 20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0"/>
+          </svg>
+        </figure>
         <div class="ref"><b>U4</b><span class="label">Owner</span></div>
         <h3>Lisa Premium Export</h3>
         <p>An export company that sources and ships commodities such as coal and charcoal to buyers abroad, handling supply, quality checks and logistics.</p>
