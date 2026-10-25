@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Okai Paul Elisha is a business owner, software engineer, computer engineer and hardware specialist, founder of Ulisha Limited (Ulisha Store, U-Farm) and X-Station solar charging.">
-<meta name="keywords" content="Okai Paul Elisha, Paul Elisha, Ulisha Limited, Ulisha Store, U-Farm, X-Station, solar charging, software engineer, computer engineer, hardware engineer, founder">
+<meta name="description" content="Okai Paul Elisha is a business owner, software engineer, computer engineer and hardware specialist, founder of Ulisha Limited (Ulisha Store, U-Farm), X-Station solar charging, and owner of Lisa Premium Export (coal and charcoal export).">
+<meta name="keywords" content="Okai Paul Elisha, Paul Elisha, Ulisha Limited, Ulisha Store, U-Farm, X-Station, solar charging, Lisa Premium Export, coal export, charcoal export, software engineer, computer engineer, hardware engineer, founder">
 <meta name="author" content="Okai Paul Elisha">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#1d6a4d">
@@ -12,7 +12,7 @@
 <meta property="og:type" content="profile">
 <meta property="og:site_name" content="Okai Paul Elisha">
 <meta property="og:title" content="Okai Paul Elisha | Founder of Ulisha Limited and X-Station">
-<meta property="og:description" content="Business owner, software engineer, computer engineer and hardware specialist. Founder of Ulisha Limited (Ulisha Store, U-Farm) and X-Station.">
+<meta property="og:description" content="Business owner, software engineer, computer engineer and hardware specialist. Founder of Ulisha Limited (Ulisha Store, U-Farm) and X-Station. Owner of Lisa Premium Export.">
 <meta property="og:url" content="https://elitexv.github.io/myportfolio-/">
 <meta property="profile:first_name" content="Okai">
 <meta property="profile:last_name" content="Elisha">
@@ -24,27 +24,63 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-  {
-  "@type": "Person",
-  "@id": "#okai-paul-elisha",
-  "name": "Okai Paul Elisha",
-  "alternateName": ["Paul Elisha", "Okai Paul"],
-  "url": "https://elitexv.github.io/myportfolio-/",
-  "email": "mailto:elite@ulishastore.com",
-  "telephone": "+2347060438205",
-  "jobTitle": ["Founder", "Software Engineer", "Computer Engineer", "Hardware Specialist"],
-  "knowsAbout": ["Software engineering", "Computer engineering", "Hardware repair", "Solar charging", "Power electronics", "E-commerce", "Business operations"],
-  "worksFor": { "@id": "#ulisha-limited" },
-  "sameAs": ["https://github.com/Elitexv"]
-  },
+    {
+      "@type": "Person",
+      "@id": "#okai-paul-elisha",
+      "name": "Okai Paul Elisha",
+      "alternateName": [
+        "Paul Elisha",
+        "Okai Paul"
+      ],
+      "url": "https://elitexv.github.io/myportfolio-/",
+      "email": "mailto:elite@ulishastore.com",
+      "telephone": "+2347060438205",
+      "jobTitle": [
+        "Founder",
+        "Software Engineer",
+        "Computer Engineer",
+        "Hardware Specialist"
+      ],
+      "knowsAbout": [
+        "Software engineering",
+        "Computer engineering",
+        "Hardware repair",
+        "Solar charging",
+        "Power electronics",
+        "E-commerce",
+        "Business operations",
+        "Export trade",
+        "Coal and charcoal export"
+      ],
+      "worksFor": [
+        {
+          "@id": "#ulisha-limited"
+        },
+        {
+          "@id": "#lisa-premium-export"
+        }
+      ],
+      "sameAs": [
+        "https://github.com/Elitexv"
+      ]
+    },
     {
       "@type": "Organization",
       "@id": "#ulisha-limited",
       "name": "Ulisha Limited",
-      "founder": { "@id": "#okai-paul-elisha" },
+      "founder": {
+        "@id": "#okai-paul-elisha"
+      },
       "brand": [
-        { "@type": "Brand", "name": "Ulisha Store", "url": "https://ulishastore.com" },
-        { "@type": "Brand", "name": "U-Farm" }
+        {
+          "@type": "Brand",
+          "name": "Ulisha Store",
+          "url": "https://ulishastore.com"
+        },
+        {
+          "@type": "Brand",
+          "name": "U-Farm"
+        }
       ]
     },
     {
@@ -52,7 +88,21 @@
       "@id": "#x-station",
       "name": "X-Station",
       "description": "A modern solar charging solution.",
-      "founder": { "@id": "#okai-paul-elisha" }
+      "founder": {
+        "@id": "#okai-paul-elisha"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "#lisa-premium-export",
+      "name": "Lisa Premium Export",
+      "description": "An export company shipping products such as coal and charcoal.",
+      "owner": {
+        "@id": "#okai-paul-elisha"
+      },
+      "founder": {
+        "@id": "#okai-paul-elisha"
+      }
     }
   ]
 }
@@ -187,7 +237,7 @@ section { padding-block: 72px; border-top: 1px solid var(--line); }
 .parent .label { color: var(--bg); opacity: 0.75; }
 .parent h3 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-stretch: 118%; font-weight: 850; line-height: 1.05; margin-top: 4px; }
 .parent p { font-weight: 500; max-width: 28em; }
-.ventures { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.ventures { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 .venture {
   background: var(--panel); border: 1px solid var(--line); border-radius: 4px;
   padding: 28px; display: grid; gap: 16px; align-content: start;
@@ -270,6 +320,7 @@ tbody tr:hover td.sym { color: var(--mask); }
   .pins .pin:nth-child(2), .pins .pin:nth-child(2) .leg { animation-delay: .7s; }
   .pins .pin:nth-child(3), .pins .pin:nth-child(3) .leg { animation-delay: .85s; }
   .pins .pin:nth-child(4), .pins .pin:nth-child(4) .leg { animation-delay: 1s; }
+  .pins .pin:nth-child(5), .pins .pin:nth-child(5) .leg { animation-delay: 1.15s; }
   .pinout figcaption { animation: fade .6s 1.3s both; }
 }
 /* Scroll reveals: only where the browser ties them to scroll position; elsewhere content simply sits in place. */
@@ -334,7 +385,7 @@ tbody tr:hover td.sym { color: var(--mask); }
     <div>
       <h1 class="name">Okai Paul Elisha <span>Founder · Software engineer · Computer engineer · Hardware specialist</span></h1>
       <p class="display">I run the business, write the code, and <em>build the hardware.</em></p>
-      <p class="lede">I'm Okai Paul Elisha, founder of <strong>Ulisha Limited</strong>, the company behind <strong>Ulisha Store</strong> and <strong>U-Farm</strong>, and founder of <strong>X-Station</strong>. I work across the whole stack, from the circuit board and the machine it sits in to the software on top and the business that sells it.</p>
+      <p class="lede">I'm Okai Paul Elisha, founder of <strong>Ulisha Limited</strong>, the company behind <strong>Ulisha Store</strong> and <strong>U-Farm</strong>, founder of <strong>X-Station</strong>, and owner of <strong>Lisa Premium Export</strong>. I work across the whole stack, from the circuit board and the machine it sits in to the software on top and the business that sells it.</p>
       <div class="cta">
         <a class="btn primary" href="#contact">Work with me</a>
         <a class="btn" href="#ventures">See my ventures</a>
@@ -347,13 +398,15 @@ tbody tr:hover td.sym { color: var(--mask); }
         <div class="pin">Ulisha Limited <span class="n">2</span><span class="leg"></span></div>
         <div class="pin">Ulisha Store <span class="n">3</span><span class="leg"></span></div>
         <div class="pin">U-Farm <span class="n">4</span><span class="leg"></span></div>
+        <div class="pin">X-Station <span class="n">5</span><span class="leg"></span></div>
       </div>
-      <div class="chip"><b>PAUL</b><span>FOUNDER-ENG</span><span>DIP-8</span></div>
+      <div class="chip"><b>PAUL</b><span>FOUNDER-ENG</span><span>DIP-10</span></div>
       <div class="pins right">
-        <div class="pin"><span class="leg"></span><span class="n">8</span> X-Station</div>
-        <div class="pin"><span class="leg"></span><span class="n">7</span> Software</div>
-        <div class="pin"><span class="leg"></span><span class="n">6</span> Computer eng.</div>
-        <div class="pin"><span class="leg"></span><span class="n">5</span> Hardware</div>
+        <div class="pin"><span class="leg"></span><span class="n">10</span> Lisa Premium</div>
+        <div class="pin"><span class="leg"></span><span class="n">9</span> Software</div>
+        <div class="pin"><span class="leg"></span><span class="n">8</span> Computer eng.</div>
+        <div class="pin"><span class="leg"></span><span class="n">7</span> Hardware</div>
+        <div class="pin"><span class="leg"></span><span class="n">6</span> Solar power</div>
       </div>
       <figcaption class="label">Fig. 1 · Pin configuration (top view)</figcaption>
     </figure>
@@ -365,7 +418,7 @@ tbody tr:hover td.sym { color: var(--mask); }
     <div class="about">
       <h2>About Okai Paul Elisha</h2>
       <div class="about-body">
-        <p><strong>Okai Paul Elisha</strong> is a business owner, software engineer, computer engineer and hardware specialist. Okai is the founder of <strong>Ulisha Limited</strong>, the company behind the online store <a href="https://ulishastore.com" target="_blank" rel="noopener">Ulisha Store</a> and the farming product <strong>U-Farm</strong>, and the founder of <strong>X-Station</strong>, a modern solar charging solution.</p>
+        <p><strong>Okai Paul Elisha</strong> is a business owner, software engineer, computer engineer and hardware specialist. Okai is the founder of <strong>Ulisha Limited</strong>, the company behind the online store <a href="https://ulishastore.com" target="_blank" rel="noopener">Ulisha Store</a> and the farming product <strong>U-Farm</strong>, and the founder of <strong>X-Station</strong>, a modern solar charging solution. Okai also owns <strong>Lisa Premium Export</strong>, an export company that ships products such as coal and charcoal.</p>
         <p>Okai's work covers the full stack of a technology business: designing and repairing hardware, building solar and battery power systems, writing software for web and mobile, and running the operations, sales and customer service that keep a company growing.</p>
       </div>
     </div>
@@ -374,7 +427,7 @@ tbody tr:hover td.sym { color: var(--mask); }
   <section id="ventures">
     <div class="sec-head">
       <h2>Ventures</h2>
-      <p>I founded Ulisha Limited, which owns Ulisha Store and U-Farm. I also founded X-Station. Each one draws on both the business and the engineering side of what I do.</p>
+      <p>I founded Ulisha Limited, which owns Ulisha Store and U-Farm. I also founded X-Station and own Lisa Premium Export. Each one draws on both the business and the engineering side of what I do.</p>
     </div>
     <div class="parent">
       <div><span class="label">Parent company · Founder</span><h3>Ulisha Limited</h3></div>
@@ -400,6 +453,12 @@ tbody tr:hover td.sym { color: var(--mask); }
         <p>A modern solar charging solution. X-Station turns sunlight into dependable power for charging devices, combining solar panels, battery storage and power electronics in one station.</p>
         <ul><li>Solar energy</li><li>Device charging</li><li>Battery storage</li><li>Power electronics</li></ul>
       </article>
+      <article class="venture">
+        <div class="ref"><b>U4</b><span class="label">Owner</span></div>
+        <h3>Lisa Premium Export</h3>
+        <p>An export company that sources and ships commodities such as coal and charcoal to buyers abroad, handling supply, quality checks and logistics.</p>
+        <ul><li>Export</li><li>Coal</li><li>Charcoal</li><li>Logistics</li></ul>
+      </article>
     </div>
   </section>
 
@@ -412,7 +471,7 @@ tbody tr:hover td.sym { color: var(--mask); }
       <table>
         <thead><tr><th>Sym</th><th>Parameter</th><th>Covers</th></tr></thead>
         <tbody>
-          <tr><td class="sym">BIZ</td><td class="param">Business</td><td class="cond">Founding and running companies, sourcing, pricing, sales, customer relationships and day-to-day operations.</td></tr>
+          <tr><td class="sym">BIZ</td><td class="param">Business</td><td class="cond">Founding and running companies, export trade, sourcing, pricing, sales, customer relationships and day-to-day operations.</td></tr>
           <tr><td class="sym">SW</td><td class="param">Software engineering</td><td class="cond">Web and mobile apps, back-end APIs, databases, e-commerce and internal business tools.</td></tr>
           <tr><td class="sym">CE</td><td class="param">Computer engineering</td><td class="cond">Computer architecture, embedded systems, firmware, networking, and connecting hardware to software.</td></tr>
           <tr><td class="sym">HW</td><td class="param">Hardware</td><td class="cond">PC and workstation builds, diagnostics, component-level repair, solar and battery systems, and power electronics.</td></tr>
@@ -458,7 +517,7 @@ tbody tr:hover td.sym { color: var(--mask); }
   </section>
 
   <footer>
-    <span class="label">© 2026 Okai Paul Elisha · Ulisha Limited · X-Station</span>
+    <span class="label">© 2026 Okai Paul Elisha · Ulisha Limited · X-Station · Lisa Premium Export</span>
     <span class="label">End of document</span>
   </footer>
 </div>
