@@ -3,28 +3,88 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Paul, founder of Ulisha Limited (Ulisha Store, U-Farm) and X-Station. Business owner, software engineer, computer engineer and hardware specialist.">
-<title>Paul's Portfolio</title>
+<meta name="description" content="Okai Paul Elisha is a business owner, software engineer, computer engineer and hardware specialist, founder of Ulisha Limited (Ulisha Store, U-Farm) and X-Station solar charging.">
+<meta name="keywords" content="Okai Paul Elisha, Paul Elisha, Ulisha Limited, Ulisha Store, U-Farm, X-Station, solar charging, software engineer, computer engineer, hardware engineer, founder">
+<meta name="author" content="Okai Paul Elisha">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#1d6a4d">
+<link rel="canonical" href="https://elitexv.github.io/myportfolio-/">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Okai Paul Elisha">
+<meta property="og:title" content="Okai Paul Elisha | Founder of Ulisha Limited and X-Station">
+<meta property="og:description" content="Business owner, software engineer, computer engineer and hardware specialist. Founder of Ulisha Limited (Ulisha Store, U-Farm) and X-Station.">
+<meta property="og:url" content="https://elitexv.github.io/myportfolio-/">
+<meta property="profile:first_name" content="Okai">
+<meta property="profile:last_name" content="Elisha">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Okai Paul Elisha | Founder of Ulisha Limited and X-Station">
+<meta name="twitter:description" content="Business owner, software engineer, computer engineer and hardware specialist.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='7' y='5' width='18' height='22' rx='2' fill='%231d6a4d'/%3E%3Cg fill='%23b8692c'%3E%3Crect x='2' y='9' width='5' height='2'/%3E%3Crect x='2' y='15' width='5' height='2'/%3E%3Crect x='2' y='21' width='5' height='2'/%3E%3Crect x='25' y='9' width='5' height='2'/%3E%3Crect x='25' y='15' width='5' height='2'/%3E%3Crect x='25' y='21' width='5' height='2'/%3E%3C/g%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+  {
+  "@type": "Person",
+  "@id": "#okai-paul-elisha",
+  "name": "Okai Paul Elisha",
+  "alternateName": ["Paul Elisha", "Okai Paul"],
+  "url": "https://elitexv.github.io/myportfolio-/",
+  "email": "mailto:elite@ulishastore.com",
+  "jobTitle": ["Founder", "Software Engineer", "Computer Engineer", "Hardware Specialist"],
+  "knowsAbout": ["Software engineering", "Computer engineering", "Hardware repair", "Solar charging", "Power electronics", "E-commerce", "Business operations"],
+  "worksFor": { "@id": "#ulisha-limited" },
+  "sameAs": ["https://github.com/Elitexv"]
+  },
+    {
+      "@type": "Organization",
+      "@id": "#ulisha-limited",
+      "name": "Ulisha Limited",
+      "founder": { "@id": "#okai-paul-elisha" },
+      "brand": [
+        { "@type": "Brand", "name": "Ulisha Store", "url": "https://ulishastore.com" },
+        { "@type": "Brand", "name": "U-Farm" }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "#x-station",
+      "name": "X-Station",
+      "description": "A modern solar charging solution.",
+      "founder": { "@id": "#okai-paul-elisha" }
+    }
+  ]
+}
+</script>
+<title>Okai Paul Elisha</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>
 /* Layout: an engineering datasheet. Doc header strip, a chip "pinout" hero over routed traces, components (U1, U2), a characteristics table, a sequenced process, contact. */
-/* Single committed look: black board, orange signal. Same in every viewer theme. */
 :root {
-  --bg: #0a0908;
-  --panel: #15120f;
-  --fg: #f4ede6;
-  --muted: #a69b91;
-  --line: #2c2620;
-  --mask: #ff7a1a;      /* signal orange (primary accent) */
-  --copper: #ffb46b;    /* light orange trace */
-  --chip: #ff7a1a;
-  --chip-fg: #0a0908;
+  --bg: #eef1ef;
+  --panel: #f8faf9;
+  --fg: #13201b;
+  --muted: #56655f;
+  --line: #c9d3cf;
+  --mask: #1d6a4d;      /* solder-mask green */
+  --copper: #b8692c;    /* copper trace */
+  --chip: #1a2420;
+  --chip-fg: #e8eeeb;
   --display: "Archivo", "Arial Narrow", system-ui, sans-serif;
   --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
-  color-scheme: dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1512; --panel: #121d19; --fg: #dde6e2; --muted: #8fa199; --line: #26352f;
+    --mask: #4dbb8b; --copper: #d99358; --chip: #050908; --chip-fg: #dde6e2; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1512; --panel: #121d19; --fg: #dde6e2; --muted: #8fa199; --line: #26352f;
+  --mask: #4dbb8b; --copper: #d99358; --chip: #050908; --chip-fg: #dde6e2; color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
@@ -60,11 +120,24 @@ p { margin: 0; }
   display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
   gap: 48px; align-items: center; padding-block: 64px 32px;
 }
-.hero h1 {
+.hero .name {
+  font-family: var(--display); font-size: 1.15rem; font-stretch: 112%; font-weight: 800;
+  display: grid; gap: 4px; margin-bottom: 16px;
+}
+.hero .name span {
+  font-family: var(--mono); font-size: 0.72rem; font-weight: 400; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--muted); font-stretch: normal;
+}
+.hero .display {
+  font-family: var(--display); text-wrap: balance;
   font-size: clamp(2.4rem, 6.2vw, 4.6rem); font-stretch: 118%;
   font-weight: 850; line-height: 0.98; letter-spacing: -0.01em;
 }
-.hero h1 em { font-style: normal; color: var(--mask); }
+.hero .display em { font-style: normal; color: var(--mask); }
+.about { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 32px; }
+.about-body { display: grid; gap: 16px; max-width: 42em; font-size: 1.05rem; }
+.about-body strong { font-weight: 600; }
+@media (max-width: 860px) { .about { grid-template-columns: minmax(0, 1fr); gap: 20px; } }
 .hero .lede { margin-top: 24px; max-width: 34em; font-size: 1.1rem; color: var(--muted); }
 .hero .lede strong { color: var(--fg); font-weight: 600; }
 .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
@@ -73,9 +146,9 @@ p { margin: 0; }
   border: 1px solid var(--fg); color: var(--fg); background: transparent;
   text-decoration: none; cursor: pointer;
 }
-.btn.primary { background: var(--mask); border-color: var(--mask); color: var(--bg); font-weight: 600; }
-.btn:hover { border-color: var(--mask); color: var(--mask); }
-.btn.primary:hover { background: var(--fg); border-color: var(--fg); color: var(--bg); }
+.btn.primary { background: var(--fg); color: var(--bg); }
+.btn:hover { border-color: var(--mask); }
+.btn.primary:hover { background: var(--mask); color: var(--bg); }
 
 /* Chip pinout */
 .pinout { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
@@ -199,8 +272,9 @@ footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8p
 
 <div class="wrap">
   <header class="doc">
-    <span class="label">Doc P-001 · Rev 2026.10 · Paul</span>
+    <span class="label">Doc P-001 · Rev 2026.10 · Okai Paul Elisha</span>
     <nav class="label" aria-label="Sections">
+      <a href="#about">About</a>
       <a href="#ventures">Ventures</a>
       <a href="#capabilities">Capabilities</a>
       <a href="#process">Process</a>
@@ -210,9 +284,9 @@ footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8p
 
   <div class="hero">
     <div>
-      <p class="label">Founder · Software engineer · Computer engineer · Hardware specialist</p>
-      <h1 style="margin-top:16px">I run the business, write the code, and <em>build the hardware.</em></h1>
-      <p class="lede">I'm Paul, founder of <strong>Ulisha Limited</strong>, the company behind <strong>Ulisha Store</strong> and <strong>U-Farm</strong>, and founder of <strong>X-Station</strong>. I work across the whole stack, from the circuit board and the machine it sits in to the software on top and the business that sells it.</p>
+      <h1 class="name">Okai Paul Elisha <span>Founder · Software engineer · Computer engineer · Hardware specialist</span></h1>
+      <p class="display">I run the business, write the code, and <em>build the hardware.</em></p>
+      <p class="lede">I'm Okai Paul Elisha, founder of <strong>Ulisha Limited</strong>, the company behind <strong>Ulisha Store</strong> and <strong>U-Farm</strong>, and founder of <strong>X-Station</strong>. I work across the whole stack, from the circuit board and the machine it sits in to the software on top and the business that sells it.</p>
       <div class="cta">
         <a class="btn primary" href="#contact">Work with me</a>
         <a class="btn" href="#ventures">See my ventures</a>
@@ -238,6 +312,16 @@ footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8p
   </div>
 
   <canvas class="traces" id="traces" aria-hidden="true"></canvas>
+
+  <section id="about">
+    <div class="about">
+      <h2>About Okai Paul Elisha</h2>
+      <div class="about-body">
+        <p><strong>Okai Paul Elisha</strong> is a business owner, software engineer, computer engineer and hardware specialist. Okai is the founder of <strong>Ulisha Limited</strong>, the company behind the online store <a href="https://ulishastore.com" target="_blank" rel="noopener">Ulisha Store</a> and the farming product <strong>U-Farm</strong>, and the founder of <strong>X-Station</strong>, a modern solar charging solution.</p>
+        <p>Okai's work covers the full stack of a technology business: designing and repairing hardware, building solar and battery power systems, writing software for web and mobile, and running the operations, sales and customer service that keep a company growing.</p>
+      </div>
+    </div>
+  </section>
 
   <section id="ventures">
     <div class="sec-head">
@@ -321,7 +405,7 @@ footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8p
   </section>
 
   <footer>
-    <span class="label">© 2026 Paul · Ulisha Limited · X-Station</span>
+    <span class="label">© 2026 Okai Paul Elisha · Ulisha Limited · X-Station</span>
     <span class="label">End of document</span>
   </footer>
 </div>
@@ -373,7 +457,7 @@ footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8p
       var f = Math.max(0, Math.min(1, (t - tr.delay) / 0.65));
       var target = len(tr.pts) * f, p = tr.pts, acc = 0, end = p[0];
       ctx.strokeStyle = ctx.fillStyle = tr.copper ? copper : mask;
-      ctx.globalAlpha = tr.copper ? 0.85 : 0.55;
+      ctx.globalAlpha = tr.copper ? 0.9 : 0.45;
       ctx.beginPath(); ctx.moveTo(p[0][0], p[0][1]);
       for (var i = 1; i < p.length; i++) {
         var seg = Math.hypot(p[i][0] - p[i-1][0], p[i][1] - p[i-1][1]);
