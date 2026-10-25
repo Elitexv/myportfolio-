@@ -235,6 +235,53 @@ td.cond { color: var(--muted); }
 
 footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding-block: 28px; border-top: 1px solid var(--line); }
 
+/* Motion */
+.venture, .btn, .pin .leg, td { transition: transform .25s ease, border-color .25s ease, background-color .25s ease, color .25s ease, box-shadow .25s ease; }
+.venture:hover { transform: translateY(-4px); border-color: var(--mask); box-shadow: 0 10px 28px -18px var(--mask); }
+tbody tr:hover td { background: var(--panel); }
+tbody tr:hover td.sym { color: var(--mask); }
+.pin:hover .leg { background: var(--mask); }
+.btn:active { transform: translateY(1px); }
+
+@keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@keyframes leg { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes power {
+  0% { box-shadow: 0 0 0 0 transparent; }
+  35% { box-shadow: 0 0 0 8px color-mix(in srgb, var(--mask) 35%, transparent), 0 0 40px color-mix(in srgb, var(--mask) 45%, transparent); }
+  100% { box-shadow: 0 0 0 0 transparent, 0 0 24px color-mix(in srgb, var(--mask) 18%, transparent); }
+}
+@keyframes led { 0%, 70%, 100% { background: transparent; } 78%, 92% { background: var(--mask); border-color: var(--mask); } }
+@keyframes fill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero .name, .hero .display, .hero .lede, .hero .cta { animation: rise .8s cubic-bezier(.2, .7, .2, 1) both; }
+  .hero .name { animation-delay: .05s; }
+  .hero .display { animation-delay: .18s; }
+  .hero .lede { animation-delay: .34s; }
+  .hero .cta { animation-delay: .48s; }
+  .pinout .chip { animation: fade .5s .3s both, power 1.4s 1.3s both; }
+  .chip::before { animation: led 2.6s 2.4s infinite; }
+  .pins.left .leg { transform-origin: right; }
+  .pins.right .leg { transform-origin: left; }
+  .pin .leg { animation: leg .35s cubic-bezier(.3, .8, .3, 1) both; }
+  .pin { animation: fade .5s both; }
+  .pins .pin:nth-child(1), .pins .pin:nth-child(1) .leg { animation-delay: .55s; }
+  .pins .pin:nth-child(2), .pins .pin:nth-child(2) .leg { animation-delay: .7s; }
+  .pins .pin:nth-child(3), .pins .pin:nth-child(3) .leg { animation-delay: .85s; }
+  .pins .pin:nth-child(4), .pins .pin:nth-child(4) .leg { animation-delay: 1s; }
+  .pinout figcaption { animation: fade .6s 1.3s both; }
+}
+/* Scroll reveals: only where the browser ties them to scroll position; elsewhere content simply sits in place. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .sec-head, .about h2, .about-body, .parent, .venture, tbody tr, .steps li, .contact > *, .addr {
+      animation: rise linear both; animation-timeline: view(); animation-range: entry 0% entry 70%;
+    }
+    .steps .tick s { transform-origin: left; animation: fill linear both; animation-timeline: view(); animation-range: entry 40% cover 45%; }
+  }
+}
+
 @media (max-width: 860px) {
   .hero, .contact { grid-template-columns: minmax(0, 1fr); gap: 40px; }
   .hero { padding-block: 40px 16px; }
@@ -487,16 +534,40 @@ footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8p
     build(w, h);
   }
 
+  function pointAt(p, d) {
+    for (var i = 1; i < p.length; i++) {
+      var seg = Math.hypot(p[i][0] - p[i-1][0], p[i][1] - p[i-1][1]);
+      if (d <= seg) { var k = d / seg; return [p[i-1][0] + (p[i][0] - p[i-1][0]) * k, p[i-1][1] + (p[i][1] - p[i-1][1]) * k]; }
+      d -= seg;
+    }
+    return p[p.length - 1];
+  }
+
+  // Current pulses travelling along a subset of traces
+  function pulses(ms, fadeIn) {
+    var copper = getComputedStyle(document.documentElement).getPropertyValue('--copper').trim();
+    ctx.fillStyle = copper; ctx.shadowColor = copper; ctx.shadowBlur = 10;
+    traces.forEach(function (tr, i) {
+      if (!tr.copper && i % 3) return;
+      var f = (ms / 1000 / (2 + tr.delay * 6) + tr.delay * 3) % 1;
+      var pt = pointAt(tr.pts, len(tr.pts) * f);
+      ctx.globalAlpha = Math.sin(f * Math.PI) * fadeIn;
+      ctx.beginPath(); ctx.arc(pt[0], pt[1], 2.4, 0, Math.PI * 2); ctx.fill();
+    });
+    ctx.shadowBlur = 0; ctx.globalAlpha = 1;
+  }
+
   function frame(ts) {
     if (start === null) start = ts;
     var t = (ts - start) / 1600;
     draw(t);
-    if (t < 1.05) requestAnimationFrame(frame);
+    if (t > 1) pulses(ts - start, Math.min(1, (t - 1) * 2));
+    requestAnimationFrame(frame);
   }
 
   size();
   if (reduce) draw(2); else requestAnimationFrame(frame);
-  window.addEventListener('resize', function () { size(); draw(2); });
+  window.addEventListener('resize', function () { size(); if (reduce) draw(2); });
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () { draw(2); });
   new MutationObserver(function () { draw(2); }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 })();
