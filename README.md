@@ -8,3 +8,5 @@ Portfolio website of **Okai Paul Elisha**: business owner, software engineer, co
 Live site: https://elitexv.github.io/myportfolio-/
 
 Contact: elite@ulishastore.com
+
+WhatsApp: +234 706 043 8205 (https://wa.me/2347060438205)
