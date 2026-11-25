@@ -6,7 +6,7 @@ Portfolio website of **Okai Paul Elisha**: business owner, software engineer, co
 - Founder of [**X-Station**](https://x-station-drab.vercel.app/), a modern solar charging solution
 - Owner of **Coalbridge Global**, focused on coal export and trading
 
-Live site: https://elitexv.github.io/myportfolio-/
+Live site: https://okaipaulelisha.xyz/
 
 Contact: elite@ulishastore.com
 

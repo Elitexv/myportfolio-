@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://elitexv.github.io/myportfolio-/sitemap.xml
+Sitemap: https://okaipaulelisha.xyz/sitemap.xml

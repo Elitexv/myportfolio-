@@ -3,17 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Okai Paul Elisha is a business owner, software engineer, computer engineer and hardware specialist, founder of Ulisha Limited and X-Station, and owner of Coalbridge Global, focused on coal export and trading.">
+<meta name="description" content="Okai Paul Elisha: founder of Ulisha Limited (Ulisha Store, U-Farm) and X-Station solar charging, owner of Coalbridge Global coal export. Software &amp; hardware engineer.">
 <meta name="keywords" content="Okai Paul Elisha, Paul Elisha, Ulisha Limited, Ulisha Store, U-Farm, X-Station, solar charging, Coalbridge Global, coal export, coal trading, software engineer, computer engineer, hardware engineer, founder">
 <meta name="author" content="Okai Paul Elisha">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#1d6a4d">
-<link rel="canonical" href="https://elitexv.github.io/myportfolio-/">
+<link rel="canonical" href="https://okaipaulelisha.xyz/">
 <meta property="og:type" content="profile">
 <meta property="og:site_name" content="Okai Paul Elisha">
 <meta property="og:title" content="Okai Paul Elisha | Founder of Ulisha Limited and X-Station">
 <meta property="og:description" content="Business owner, software engineer, computer engineer and hardware specialist. Founder of Ulisha Limited and X-Station. Owner of Coalbridge Global, focused on coal export and trading.">
-<meta property="og:url" content="https://elitexv.github.io/myportfolio-/">
+<meta property="og:url" content="https://okaipaulelisha.xyz/">
+<meta property="og:locale" content="en_US">
 <meta property="profile:first_name" content="Okai">
 <meta property="profile:last_name" content="Elisha">
 <meta name="twitter:card" content="summary">
@@ -25,14 +26,40 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Person",
-      "@id": "#okai-paul-elisha",
+      "@type": "WebSite",
+      "@id": "https://okaipaulelisha.xyz/#website",
+      "url": "https://okaipaulelisha.xyz/",
       "name": "Okai Paul Elisha",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://okaipaulelisha.xyz/#okai-paul-elisha"
+      }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://okaipaulelisha.xyz/#profile",
+      "url": "https://okaipaulelisha.xyz/",
+      "name": "Okai Paul Elisha | Founder of Ulisha Limited & X-Station, Software Engineer",
+      "isPartOf": {
+        "@id": "https://okaipaulelisha.xyz/#website"
+      },
+      "dateModified": "2026-11-25",
+      "mainEntity": {
+        "@id": "https://okaipaulelisha.xyz/#okai-paul-elisha"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://okaipaulelisha.xyz/#okai-paul-elisha",
+      "name": "Okai Paul Elisha",
+      "givenName": "Okai",
+      "familyName": "Elisha",
+      "description": "Business owner, software engineer, computer engineer and hardware specialist. Founder of Ulisha Limited and X-Station; owner of Coalbridge Global.",
       "alternateName": [
         "Paul Elisha",
         "Okai Paul"
       ],
-      "url": "https://elitexv.github.io/myportfolio-/",
+      "url": "https://okaipaulelisha.xyz/",
       "email": "mailto:elite@ulishastore.com",
       "telephone": "+2347060438205",
       "jobTitle": [
@@ -54,10 +81,10 @@
       ],
       "worksFor": [
         {
-          "@id": "#ulisha-limited"
+          "@id": "https://okaipaulelisha.xyz/#ulisha-limited"
         },
         {
-          "@id": "#coalbridge-global"
+          "@id": "https://okaipaulelisha.xyz/#coalbridge-global"
         }
       ],
       "sameAs": [
@@ -66,10 +93,10 @@
     },
     {
       "@type": "Organization",
-      "@id": "#ulisha-limited",
+      "@id": "https://okaipaulelisha.xyz/#ulisha-limited",
       "name": "Ulisha Limited",
       "founder": {
-        "@id": "#okai-paul-elisha"
+        "@id": "https://okaipaulelisha.xyz/#okai-paul-elisha"
       },
       "brand": [
         {
@@ -85,30 +112,30 @@
     },
     {
       "@type": "Organization",
-      "@id": "#x-station",
+      "@id": "https://okaipaulelisha.xyz/#x-station",
       "name": "X-Station",
       "description": "A modern solar charging solution.",
       "url": "https://x-station-drab.vercel.app/",
       "founder": {
-        "@id": "#okai-paul-elisha"
+        "@id": "https://okaipaulelisha.xyz/#okai-paul-elisha"
       }
     },
     {
       "@type": "Organization",
-      "@id": "#coalbridge-global",
+      "@id": "https://okaipaulelisha.xyz/#coalbridge-global",
       "name": "Coalbridge Global",
       "description": "A coal export and trading business connecting coal suppliers with buyers.",
       "owner": {
-        "@id": "#okai-paul-elisha"
+        "@id": "https://okaipaulelisha.xyz/#okai-paul-elisha"
       },
       "founder": {
-        "@id": "#okai-paul-elisha"
+        "@id": "https://okaipaulelisha.xyz/#okai-paul-elisha"
       }
     }
   ]
 }
 </script>
-<title>Okai Paul Elisha</title>
+<title>Okai Paul Elisha | Founder of Ulisha Limited &amp; X-Station, Software Engineer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
@@ -162,10 +189,22 @@ p { margin: 0; }
 .doc {
   display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between;
   padding-block: 18px; border-bottom: 1px solid var(--line);
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
 }
-.doc nav { display: flex; flex-wrap: wrap; gap: 4px 20px; }
-.doc nav a { color: var(--fg); text-decoration: none; }
-.doc nav a:hover { color: var(--mask); }
+.doc nav { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; }
+.doc nav a {
+  color: var(--fg); text-decoration: none; position: relative; padding: 7px 10px;
+  border-radius: 3px; transition: color .2s ease, background-color .2s ease, transform .2s ease;
+}
+.doc nav a::after {
+  content: ""; position: absolute; left: 10px; right: 10px; bottom: 3px; height: 2px;
+  background: var(--mask); transform: scaleX(0); transform-origin: left;
+  transition: transform .2s ease;
+}
+.doc nav a:hover, .doc nav a:focus-visible { color: var(--mask); background: var(--panel); }
+.doc nav a:hover::after, .doc nav a:focus-visible::after { transform: scaleX(1); }
 
 /* Hero */
 .hero {
@@ -225,7 +264,7 @@ p { margin: 0; }
 /* Traces */
 .traces { display: block; width: 100%; height: 150px; }
 
-section { padding-block: 72px; border-top: 1px solid var(--line); }
+section { padding-block: 72px; border-top: 1px solid var(--line); scroll-margin-top: 104px; }
 .sec-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 40px; }
 .sec-head p { max-width: 36em; color: var(--muted); }
 
@@ -332,6 +371,7 @@ tbody tr:hover td.sym { color: var(--mask); }
 @keyframes fill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 
 @media (prefers-reduced-motion: no-preference) {
+  .doc { animation: fade .5s both; }
   .hero .name, .hero .display, .hero .lede, .hero .cta { animation: rise .8s cubic-bezier(.2, .7, .2, 1) both; }
   .hero .name { animation-delay: .05s; }
   .hero .display { animation-delay: .18s; }
@@ -374,6 +414,8 @@ tbody tr:hover td.sym { color: var(--mask); }
 }
 @media (max-width: 600px) {
   .doc { flex-direction: column; }
+  .doc nav { width: 100%; flex-wrap: nowrap; gap: 4px; overflow-x: auto; overscroll-behavior-inline: contain; scrollbar-width: thin; }
+  .doc nav a { flex: none; }
   .cta .btn { flex: 1 1 auto; text-align: center; }
   .traces { height: 100px; }
   .venture, .parent { padding: 20px; }
@@ -392,6 +434,10 @@ tbody tr:hover td.sym { color: var(--mask); }
   .pin { font-size: 0.8rem; }
   .pin .leg { width: 16px; }
 }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
 </style>
 <style>body{margin:0}img{max-width:100%}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-behavior:smooth}</style>
 </head>
@@ -409,6 +455,7 @@ tbody tr:hover td.sym { color: var(--mask); }
     </nav>
   </header>
 
+  <main>
   <div class="hero">
     <div>
       <h1 class="name">Okai Paul Elisha <span>Founder · Software engineer · Computer engineer · Hardware specialist</span></h1>
@@ -613,6 +660,7 @@ tbody tr:hover td.sym { color: var(--mask); }
       </div>
     </div>
   </section>
+  </main>
 
   <footer>
     <span class="label">© 2026 Okai Paul Elisha · Ulisha Limited · X-Station · Coalbridge Global</span>
